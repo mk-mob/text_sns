@@ -16,6 +16,8 @@ dependencies:
     sdk: flutter
   
   cupertino_icons: ^1.0.6
+  flutter_flavor: ^3.1.3
+  flutter_flavorizr: ^2.2.3
 
 dev_dependencies:
   flutter_test:
@@ -33,3 +35,22 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
+flavorizr:
+  app:
+    android:
+      flavorDimensions: "flavor-type"
+  flavors:
+    dev:
+      app:
+        name: "テキストSNS Dev"
+      android:
+        applicationId: "com.firebaseapp.text_sns_dev_3f53f"
+      ios:
+        bundleId: "com.firebaseapp.textSnsDev3f53f"
+    prod:
+      app:
+        name: "テキストSNS"
+      android:
+        applicationId: "com.firebaseapp.text_sns_prod_f7210"
+      ios:
+        bundleId: "com.firebaseapp.textSnsProdF7210"
