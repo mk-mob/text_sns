@@ -18,6 +18,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_flavor: ^3.1.3
   flutter_flavorizr: ^2.2.3
+  firebase_core: ^2.4.1
 
 dev_dependencies:
   flutter_test:
@@ -46,7 +47,7 @@ flavorizr:
       android:
         applicationId: "com.firebaseapp.text_sns_dev_3f53f"
       ios:
-        bundleId: "com.firebaseapp.textSnsDev3f53f"
+        bundleId: "com.firebaeaspp.textSnsDev3f53f"
     prod:
       app:
         name: "テキストSNS"
