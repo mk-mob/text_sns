@@ -31,7 +31,7 @@ class MyHomePage extends StatelessWidget {
             //   debugPrint("UID: ${publicUser.uid}");
             // }
             const data =
-                PublicUser(followerCount: 0, followingCount: 0, uid: "second");
+                PublicUser(followerCount: 0, followingCount: 0, uid: "third");
             final json = data.toJson();
             await FirebaseFirestore.instance
                 .collection('public_users')
