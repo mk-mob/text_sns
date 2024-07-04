@@ -2,7 +2,7 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:text_sns/models/public_usser.dart';
+import 'package:text_sns/models/public_user/public_user.dart';
 import '../flavors.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -27,7 +27,7 @@ class MyHomePage extends StatelessWidget {
               return;
             } else {
               final publicUser = PublicUser.fromJson(firstUserJson);
-              print("ユーザーのID: ${publicUser.uid}"); // first
+              debugPrint("ユーザーのID: ${publicUser.uid}"); // first
             }
           } catch (e) {
             print("アクセスが拒否されました");
