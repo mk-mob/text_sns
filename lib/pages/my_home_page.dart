@@ -5,7 +5,7 @@ import 'package:text_sns/controller/my_homepage_controller.dart';
 import '../flavors.dart';
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +16,12 @@ class MyHomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
           onPressed: controller.onFloatingActionButtonPressed),
-      body: Center(
-        child: Text(
-          'Hello ${F.title}',
-        ),
-      ),
+      body: Center(child: Obx(() {
+        return Text(
+          'ユーザーのID ${controller.rxDoc.value?.id ?? "定められていません"}',
+          style: const TextStyle(fontSize: 40.0),
+        );
+      })),
     );
   }
 }
