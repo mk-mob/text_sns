@@ -17,18 +17,27 @@ class MyHomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () async {
           try {
-            final firstUserDocument = await FirebaseFirestore.instance
+            // final firstUserDocument = await FirebaseFirestore.instance
+            //     .collection('public_users')
+            //     .doc("first")
+            //     .get();
+            // final firstUserJson = firstUserDocument.data();
+            // if (firstUserJson == null) {
+            //   print("ユーザーが存在しません");
+            //   return;
+            // } else {
+            //   final publicUser = PublicUser.fromJson(firstUserJson);
+            //   // debugPrint("ユーザーのID: ${publicUser.uid}"); // first
+            //   debugPrint("UID: ${publicUser.uid}");
+            // }
+            const data =
+                PublicUser(followerCount: 0, followingCount: 0, uid: "second");
+            final json = data.toJson();
+            await FirebaseFirestore.instance
                 .collection('public_users')
-                .doc("first")
-                .get();
-            final firstUserJson = firstUserDocument.data();
-            if (firstUserJson == null) {
-              print("ユーザーが存在しません");
-              return;
-            } else {
-              final publicUser = PublicUser.fromJson(firstUserJson);
-              debugPrint("ユーザーのID: ${publicUser.uid}"); // first
-            }
+                .doc(data.uid)
+                .set(json);
+            debugPrint("書き込みが成功しました");
           } catch (e) {
             print("アクセスが拒否されました");
           }
