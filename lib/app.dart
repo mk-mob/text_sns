@@ -2,7 +2,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'flavors.dart';
-import 'pages/my_home_page.dart';
+// import 'pages/my_home_page.dart';
+import 'view/pages/my_home_page/my_home_page.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -12,12 +13,15 @@ class App extends StatelessWidget {
     return GetMaterialApp(
       title: F.title,
       theme: ThemeData(
+        useMaterial3: false,
         primarySwatch: Colors.blue,
       ),
-      home: _flavorBanner(
-        child: const MyHomePage(),
-        show: kDebugMode,
-      ),
+      debugShowCheckedModeBanner: false,
+      // home: _flavorBanner(
+      //   child: const MyHomePage(),
+      //   show: kDebugMode,
+      // ),
+      home: const MyHomePage(),
     );
   }
 

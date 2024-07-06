@@ -17,7 +17,6 @@ flutterfire configure --out lib/gen/firebase_options_prod.dart --no-apply-gradle
 
 ## Format
     dart format --set-exit-if-changed .
-     
     flutter analyze .
 
 ## freezed自動生成

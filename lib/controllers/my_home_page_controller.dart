@@ -1,8 +1,7 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 import 'package:text_sns/constant/my_homepage_constant.dart';
-import 'package:text_sns/core/doc_ref_core.dart';
+import 'package:text_sns/core/firestore/doc_ref_core.dart';
 import 'package:text_sns/models/public_user/public_user.dart';
 import 'package:text_sns/repository/firestore_repository.dart';
 import 'package:text_sns/typedefs/firestore_typedef.dart';
